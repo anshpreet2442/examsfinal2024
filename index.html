@@ -21,7 +21,26 @@
 <body>
 <!-- partial:index.partial.html -->
 <div id="app"></div>
+  <style>
+    ::selection {
+      background-color: #FF2C75;
+      color: #fff; /* text color in the selected area */
+    }
+  </style>
+	<script>
+    // Get the current URL
+    const currentUrl = window.location.href;
 
+    // Check if the URL contains a name after #
+    const nameIndex = currentUrl.indexOf("#");
+    if (nameIndex !== -1) {
+        // Extract the name
+        const name = currentUrl.substring(nameIndex + 1);
+
+        // Display a welcome alert
+        alert(`Hey there ${name}, Welcome.`);
+    }
+</script>
 <footer>
 	<p>
 		Created with <i class="fa fa-heart"></i> by
