@@ -48,6 +48,45 @@
 		- Learn how I built it
 		<a target="_blank" href="https://anshpreet.com">in this post</a>
 	</p>
+
+ <style>
+        /* Hide the audio player */
+        #myAudio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<audio id="myAudio" controls>
+    <source src="https://github.com/anshpreet2442/examsfinal2024/raw/main/assets/clock-ticking-60-second-countdown-118231.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+</audio>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var audio = document.getElementById("myAudio");
+
+        // Try to play audio on page load
+        try {
+            audio.play();
+        } catch (error) {
+            console.error("Error playing audio on page load:", error);
+
+            // Retry after 3 seconds
+            setTimeout(function() {
+                try {
+                    audio.play();
+                } catch (errorRetry) {
+                    console.error("Error playing audio after retry:", errorRetry);
+                }
+            }, 3000);
+        }
+    });
+</script>
+
+
+	
 </footer>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.8.3/umd/react.production.min.js'></script>
