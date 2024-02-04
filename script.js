@@ -119,3 +119,21 @@ function describeArc(x, y, radius, startAngle, endAngle) {
 function mapNumber(number, in_min, in_max, out_min, out_max) {
   return (number - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("menuBtn");
+  const popupMenu = document.getElementById("popupMenu");
+
+  menuBtn.addEventListener("click", function (e) {
+    popupMenu.classList.toggle("open");
+    e.stopPropagation();
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!popupMenu.contains(e.target) && popupMenu.classList.contains("open")) {
+      popupMenu.classList.remove("open");
+    }
+  });
+});
