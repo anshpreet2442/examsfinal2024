@@ -84,3 +84,42 @@ footer a {
     color: #3c97bf;
     text-decoration: none;
 }
+
+
+
+
+
+.container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.menu-btn {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+}
+
+.popup-menu {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.box {
+  margin-bottom: 10px;
+}
+
+.popup-menu.open {
+  display: block;
+}
